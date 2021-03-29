@@ -18,9 +18,12 @@ module.exports = {
         large: "30px",
       },
     },
+    container: {
+      center: true,
+    },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };
