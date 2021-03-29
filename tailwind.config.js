@@ -1,11 +1,26 @@
 module.exports = {
-  purge: ["./dist/*.html"],
+  purge: {
+    content: ["./dist/*.html"],
+    options: {
+      keyframes: true,
+    },
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {}
+    extend: {
+      backgroundImage: (theme) => ({
+        hero: "url('/assets/images/banner.jpg')",
+      }),
+      borderRadius: {
+        large: "10rem",
+      },
+      borderWidth: {
+        large: "30px",
+      },
+    },
   },
   variants: {
-    extend: {}
+    extend: {},
   },
-  plugins: []
-}
+  plugins: [],
+};
